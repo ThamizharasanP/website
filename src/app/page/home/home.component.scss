@@ -1,0 +1,64 @@
+@import "../../../styles/theme.scss";
+.language-btn-block {
+    align-self: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.default-button {
+    font-size: 14px;
+    padding: 5px;
+    width: 80px;
+}
+
+.tamil-btn {
+    font-family: sans-serif;
+}
+
+.mr-auto,
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-toggler {
+    padding: 0
+}
+.nav-button{
+    margin-right: 5px;
+}
+.nav-bar-menu{
+    margin-right: 5px !important;
+}
+.nav-bar-text{
+    color: $app_primary_color_white !important;
+}
+.logo-img{
+    width: 70px;
+    position: absolute;
+    top: 20px;
+}
+.language-block{
+    position: relative;
+    text-align: right;
+    right: 20px;
+    top: 4px;
+    .language-text{
+        margin-right: 10px;
+    }
+    .language-text{
+        color: $app_primary_text_color_grey;
+    }
+    .active{
+        color: $app_primary_color_yellow;
+    }
+}
+.header-btn-highlight{
+    color: $app_primary_color_white;
+    background-color: $app_primary_color_yellow;
+    border-color: transparent;
+}

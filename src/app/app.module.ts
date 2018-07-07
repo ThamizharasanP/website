@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './page/home/home.component';
+import { CustomPageSliderComponent } from './directive/custom-page-slider/custom-page-slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CustomPageSliderComponent
   ],
   imports: [
     BrowserModule,
