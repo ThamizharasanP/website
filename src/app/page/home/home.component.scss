@@ -62,3 +62,47 @@
     background-color: $app_primary_color_yellow;
     border-color: transparent;
 }
+.news-event-header{
+    height: 50px;
+    background-color: $app_primary_color1;
+    width: 98%;
+}
+.block3{
+    margin-top: 10px;
+}
+
+.news-event-header-text{
+    color: $app_primary_color_white;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+.news-event-body{
+    background-color: $app_primary_text_color_grey;
+    width: 98%;  
+    border: 1px solid $app_primary_text_color_grey;
+    height: 100%;
+}
+.language-text{
+    cursor: pointer;
+}
+.heading-label1{
+    margin: 0 auto;
+}
+.our-project-block{
+    margin-top: 25px;
+}
+.our-project-card{
+    margin-top: 25px;
+}
+.project-img{
+    object-fit: scale-down;
+}
+.about-us-block{
+    margin-top: 25px;
+}
+.about-us-body{
+    margin-top: 25px;
+}

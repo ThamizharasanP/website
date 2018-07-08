@@ -6,13 +6,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
+  <!-- Nav Bar start -->
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#">
       <img class="logo-img" src="../../../assets/image/logo/logo.png">
     </a>
     <ul class="navbar-nav nav-bar-menu mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link nav-bar-text" href="#">Home</a>
+        <a class="nav-link nav-bar-text" href="#">{{languageValue ? 'Home' :'முகப்பு'}}</a>
       </li>
       <li class="nav-item">
         <a class="nav-link nav-bar-text" href="#">About Us</a>
@@ -37,14 +38,71 @@
   </div>
 </nav>
 <div class="language-block">
-  <a class="language-text active">English</a>
-  <a class="language-text">Tamil</a>
+  <a (click)="language('english')" [ngClass]="languageValue == true ? 'active' : ''" class="language-text">English</a>
+  <a (click)="language('tamil')" [ngClass]="languageValue == false ? 'active' : ''" class="language-text">Tamil</a>
 </div>
-<div class="row">
-  <div class="col col-xs-12 col-sm-8 col-md-8 banner-block">
-    <app-custom-page-slider></app-custom-page-slider>
+<div class="container-fluid block3">
+  <div class="row">
+    <div class="col col-12 col-sm-8 col-md-8 banner-block">
+      <app-custom-page-slider></app-custom-page-slider>
+    </div>
+    <div class="col col-12 col-sm-4 col-md-4 news-event-block">
+      <div class="news-event">
+        <div class="row news-event-header">
+          <p class="news-event-header-text">News & Events</p>
+        </div>
+        <div class="row news-event-body">
+          <marquee width="100%" direction="up" height="100%">
+            <p *ngFor="let item of newsEvent; let i=index;">{{languageValue == true ? item.english : item.tamil}}</p>
+          </marquee>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col col-xs-12 col-sm-4 col-md-4 banner-block">
+</div>
 
+<!-- Our Project Block -->
+<div class="container-fluid our-project-block">
+  <div class="row">
+    <h3 class="our-project-lable heading-label1">OUR PROJECT</h3>
+  </div>
+  <div class="row our-project-card">
+    <div class="col col-12 col-sm-4 col-md-4" *ngFor="let item of ourProject">
+      <div class="card">
+        <img class="card-img-top project-img" [src]=item.image alt="item.image_alt">
+        <div class="card-body">
+          <h5 class="card-title">{{languageValue == true ? item.cardTitleEnglish : item.cardTitleTamil}}</h5>
+          <p class="card-text">{{languageValue == true ? item.cardDescriptionEnglish : item.cardDescriptionTamil}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- our Project End -->
+<!-- About US  Start-->
+
+<div class="container-fluid about-us-block">
+  <div class="row">
+    <h3 class="heading-label1">ABOUT US</h3>
+  </div>
+  <div class="row about-us-body">
+    <div class="col col-sm-6 col-md-6">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" src="https://www.youtube.com/embed/DvzmzlD0pC0?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col col-sm-6 col-md-6">
+      <div class="about-text">
+        <p>{{languageValue == true ? aboutUs.aboutUsDescEnglish : aboutUs.aboutUsDescTamil}}</p>
+      </div>
+      <div class="points">
+        <ul class="point-ul" *ngFor="let item of aboutUSPoints">
+          <li class="point-li">
+            {{languageValue == true ? item.valueEnglish : item.valueTamil}}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
